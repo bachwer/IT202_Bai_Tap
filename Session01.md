@@ -61,6 +61,21 @@ flowchart TD
   
 ```
 <h1>Ex2: </h1>
+<h3>Có 3 thực thể chính</h4>
+<ul>
+  <li>Sinh Viên>Sinh
+  <li>Môn Học>Mô>l
+  <li>Mục Tiêu Học>Mục>
+</ul>
+<h3>2. Các thuộc tính cơ bản của từng thực thể</h3>
+<p>thực thể sinh viên: Mã Sinh viên, tên Sinh viên </p>
+<p>thực thể Môn Học: Mã môn học, tên môn học, số tín chỉ </p>
+<p>thựcthể sinh viên: Mã mục tiêu, nội dung mục tiêu </p>
+<h3>3. Mối quan hệ giữa các thực thể</h3>
+<p>Một sinh viên, có thể học nhiều môn</p>
+<p>Một môn học có thể có nhiều học sinh>Mp>
+<p>Môn môn học có thể có nhiều mục tiêu</p>
+<p>Mỗi mục tiêu học tập chỉ thuộc về một môn học>Mp>
 
 <h1>Ex3: </h1>
 <h1>Ex4: </h1>
