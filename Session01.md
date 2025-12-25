@@ -78,7 +78,169 @@ flowchart TD
 <p>Mỗi mục tiêu học tập chỉ thuộc về một môn học>Mp>
 
 <h1>Ex3: </h1>
-<h1>Ex4: </h1>
-<h1>Ex5: </h1>
+
+```mermaid
+erDiagram
+    MON_HOC {
+        string ma_mon_hoc
+        string ten_mon
+        int so_tin_chi
+    }
+
+    MUC_TIEU_HOC_TAP {
+        string ma_muc_tieu
+        string noi_dung_muc_tieu
+        date thoi_gian_dat_muc_tieu
+    }
+
+    MON_HOC ||--o{ MUC_TIEU_HOC_TAP : "co"
+
+```
+<h1>Ex4 + 5 </h1>
+
+```mermaid
+erDiagram
+    MON_HOC {
+        string ma_mon_hoc
+        string ten_mon
+        int so_tin_chi
+    }
+
+    MUC_TIEU_HOC_TAP {
+        string ma_muc_tieu
+        string noi_dung_muc_tieu
+        date thoi_gian_dat_muc_tieu
+    }
+
+    LICH_ON_TAP {
+        string ma_lich_on_tap
+        date ngay_on_tap
+        time thoi_gian_bat_dau
+        time thoi_gian_ket_thuc
+        string noi_dung_on_tap
+    }
+
+    TAI_LIEU {
+      string Ma_Tai_Lieu
+      string Ten_Tai_Lieu
+      string Loai_Tai_Lieu
+      string URL_Tai_Lieu
+    }
+
+    MON_HOC ||--o{ MUC_TIEU_HOC_TAP : "co"
+    MON_HOC ||--o{ LICH_ON_TAP : "co"
+    MON_HOC ||--o{ TAI_LIEU : "co"
+
+```
 <h1>Ex6: </h1>
+
+```mermaid
+  erDiagram
+    MON_HOC {
+        string ma_mon_hoc
+        string ten_mon
+        int so_tin_chi
+    }
+    MUC_TIEU{
+        string ma_muc_tieu
+        string noi_dung
+        string Thoi_gian_dat_muc_tieu
+    }
+
+    LICH_HOC{
+        string Ma_Lich_Hoc
+        string Ngay_hoc
+        string Thoi_Gian_Bat_Dau
+        string Thoi_Gian_Ket_Thuc
+        string Ghi_Chu
+    }
+
+    LICH_ON_TAP{
+        string Ma_On_tap
+        string Ngay_onTap
+        string Thoi_Gian_Bat_Dau
+        string Thoi_Gian_Ket_Thuc
+        string Noi_Dung
+    }
+
+    TAI_LIEU_HOC{
+        string Ma_tai_lieu
+        string  Ten_Tai_lieu
+        string Loai_tai_lieu
+        string Url_Tai_lieu
+    }
+
+    MON_HOC ||--o{ MUC_TIEU : "co"
+    MON_HOC ||--o{ LICH_HOC : "co"
+    MON_HOC ||--o{ LICH_ON_TAP : "co"
+    MON_HOC ||--o{ TAI_LIEU_HOC : "co"
+    TAI_LIEU_HOC ||--O{ LICH_ON_TAP : "co"
+    
+```
 <h1>Ex7: </h1>
+
+```mermaid
+erDiagram
+    HOC_SINH{
+        string Ma_Hoc_Sinh
+        string Ten_Hoc_sinh
+        string DOB
+        string Phone
+        string Khoa
+    }
+    MON_HOC {
+        string ma_mon_hoc
+        string ten_mon
+        int so_tin_chi
+    }
+    MUC_TIEU{
+        string ma_muc_tieu
+        string noi_dung
+        string Thoi_gian_dat_muc_tieu
+    }
+
+    LICH_HOC{
+        string Ma_Lich_Hoc
+        string Ngay_hoc
+        string Thoi_Gian_Bat_Dau
+        string Thoi_Gian_Ket_Thuc
+        string Ghi_Chu
+    }
+
+    LICH_ON_TAP{
+        string Ma_On_tap
+        string Ngay_onTap
+        string Thoi_Gian_Bat_Dau
+        string Thoi_Gian_Ket_Thuc
+        string Noi_Dung
+    }
+
+    TAI_LIEU_HOC{
+        string Ma_tai_lieu
+        string  Ten_Tai_lieu
+        string Loai_tai_lieu
+        string Url_Tai_lieu
+    }
+  
+    HOC_SINH||--o{ MON_HOC : "co"
+    MON_HOC ||--o{ MUC_TIEU : "co"
+    MON_HOC ||--o{ LICH_HOC : "co"
+    MON_HOC ||--o{ LICH_ON_TAP : "co"
+    MON_HOC ||--o{ TAI_LIEU_HOC : "co"
+    TAI_LIEU_HOC ||--O{ LICH_ON_TAP : "co"
+    
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
