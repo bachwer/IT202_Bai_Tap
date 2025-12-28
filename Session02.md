@@ -130,7 +130,8 @@ create table DANG_Ki
 
 
 # Ex3
-```sqlcreate table student
+```sql
+create table student
 (
     id         int AUTO_INCREMENT primary key,
     MaSinhVien varchar(255) unique not null,
@@ -147,10 +148,9 @@ CREATE table enrollment
     foreign key (MaSinhVien) REFERENCES student (MaSinhVien),
     foreign key (MaMon) references subject (MaMon)
 );
-
 ```
 #4
-``sql
+```sql
 Create Table Teacher
 (
     MaGiangVien VARCHAR(255) primary key,
@@ -178,7 +178,7 @@ alter table subject
 ```
 
 #5
-```sqlinh viên
+```sql
 create table Student
 (
     idStudents  int auto_increment primary key,
