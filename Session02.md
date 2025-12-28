@@ -148,9 +148,10 @@ CREATE table enrollment
     foreign key (MaMon) references subject (MaMon)
 );
 
-#4
 ```
-#4Create Table Teacher
+#4
+``sql
+Create Table Teacher
 (
     MaGiangVien VARCHAR(255) primary key,
     HoTen       varchar(255)        Not NUll,
@@ -174,11 +175,10 @@ ALTER TABLE subject
 alter table subject
     ADD constraint fk_Subject_teacher
         FOREIGN KEY (MaGiangVien) references Teacher (MaGiangVien);
-
+```
 
 #5
-
-# Sinh viên
+```sqlinh viên
 create table Student
 (
     idStudents  int auto_increment primary key,
@@ -214,8 +214,10 @@ create table FinalScore
     foreign key (idStudent) references Student (idStudents),
     foreign key (idSubject) references Subject (idSubject)
 );
+```
 
 #6
+```sql
 
 # Sinh viên
 create table students
@@ -275,9 +277,11 @@ create table LearningOutcomes
     primary key (IdStudent),
     FOREIGN KEY (IdStudent) references students (idStudents)
 );
+```
 
 #7
 
+```sql
 CREATE TABLE Customer
 (
     customer_id  SERIAL PRIMARY KEY,
@@ -361,3 +365,6 @@ CREATE TABLE Transaction
 );
 
 
+
+
+```
