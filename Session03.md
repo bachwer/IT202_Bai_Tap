@@ -1,3 +1,81 @@
+#1
+```mermaid
+flowchart TD
+    A[THAO TAC DU LIEU SQL]
+
+    %% INSERT
+    A --> I[Lesson 01 INSERT - Them moi]
+    I --> I1[Khai niem]
+    I1 --> I1a[Thuoc nhom DML]
+    I1 --> I1b[Muc tieu Them dong moi vao bang]
+
+    I --> I2[Cu phap chi tiet]
+    I2 --> I2a[Chen don INSERT INTO table cols VALUES vals]
+    I2 --> I2b[Chen hang loat VALUES row1 row2 row3]
+    I2 --> I2c[Chen tu bang khac INSERT INTO table_dest SELECT]
+
+    I --> I3[Luu y quan trong]
+    I3 --> I3a[NOT NULL Bat buoc co gia tri]
+    I3 --> I3b[Auto Increment Khong can truyen ID]
+    I3 --> I3c[DEFAULT Dung gia tri mac dinh]
+    I3 --> I3d[Dinh dang ngay YYYY-MM-DD]
+
+    %% UPDATE
+    A --> U[Lesson 02 UPDATE - Cap nhat]
+    U --> U1[Khai niem]
+    U1 --> U1a[Thay doi du lieu dang ton tai]
+    U1 --> U1b[Khong thay doi cau truc bang]
+
+    U --> U2[Cu phap]
+    U2 --> U2a[UPDATE table SET col bang val WHERE condition]
+
+    U --> U3[Chien luoc an toan]
+    U3 --> U3a[Cap nhat theo khoa chinh]
+    U3 --> U3b[Cap nhat hang loat BETWEEN IN LIKE]
+
+    U --> U4[Canh bao]
+    U4 --> U4a[Quen WHERE Ghi de toan bo bang]
+    U4 --> U4b[Meo SELECT truoc khi UPDATE]
+
+    %% DELETE
+    A --> D[Lesson 03 DELETE - Xoa]
+    D --> D1[Khai niem]
+    D1 --> D1a[Xoa du lieu]
+    D1 --> D1b[Khac DROP va TRUNCATE]
+
+    D --> D2[Cu phap]
+    D2 --> D2a[DELETE FROM table WHERE condition]
+
+    D --> D3[Cac kich ban]
+    D3 --> D3a[Xoa theo ID]
+    D3 --> D3b[Xoa theo logic Status]
+
+    D --> D4[Canh bao]
+    D4 --> D4a[Quen WHERE Xoa sach bang]
+    D4 --> D4b[Bi chan boi Foreign Key]
+
+    %% SELECT
+    A --> S[Lesson 04 SELECT - Truy xuat]
+    S --> S1[Khai niem]
+    S1 --> S1a[Thuoc nhom DQL]
+    S1 --> S1b[Chi doc du lieu]
+    S1 --> S1c[Ket qua la Result Set]
+
+    S --> S2[Ky thuat co ban]
+    S2 --> S2a[SELECT all Chi dung kiem tra]
+    S2 --> S2b[SELECT cot cu the]
+
+    S --> S3[Ky thuat nang cao]
+    S3 --> S3a[WHERE ket hop AND OR NOT]
+    S3 --> S3b[ORDER BY tang giam]
+    S3 --> S3c[LIMIT hoac TOP]
+
+    S --> S4[Loi ich thuc te]
+    S4 --> S4a[Phan tich du lieu]
+    S4 --> S4b[Hien thi Web App]
+    S4 --> S4c[Kiem tra INSERT UPDATE DELETE]
+```
+
 
 #2
 ```sql
