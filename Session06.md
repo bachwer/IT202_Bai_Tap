@@ -262,3 +262,19 @@ order by totalSpent desc
 
 ```
 #Ex6
+
+```sql
+
+SELECT
+    p.productName AS productName,
+    SUM(o.quantity) AS totalQuantitySold,
+    SUM(o.quantity * p.price) AS totalRevenue,
+    AVG(p.price) AS averagePrice
+FROM products p
+JOIN orderItem o
+    ON p.productId = o.productId
+GROUP BY p.productId, p.productName
+HAVING SUM(o.quantity) >= 3
+ORDER BY totalRevenue DESC
+LIMIT 5;
+```
