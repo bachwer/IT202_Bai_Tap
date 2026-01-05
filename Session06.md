@@ -136,7 +136,129 @@ ORDER BY TotalSpent DESC;
 #Ex3
 ```sql
 
+
+select
+    o.orderDate,
+    count(o.totalAmount) as TotalOrder
+from orderProduct o
+group by orderDate;
+
+select
+    o.orderDate,
+    sum(o.totalAmount) as totalSpent
+from orderProduct o
+group by orderDate;
+
+select
+    o.orderDate,
+    sum(o.totalAmount) as TotalSpent
+from orderProduct o
+group by orderDate
+having TotalSpent > 1000000
+ORDER BY o.orderDate;
+
 ```
 #Ex4
+```sql
+
+
+
+create table products (
+    productId int auto_increment primary key,
+    productName varchar(255) not null,
+    price decimal (10,2) not null
+);
+
+create table orderItem(
+    orderItemId int auto_increment primary key,
+    productId int,
+    quantity int check(quantity > 0),
+    foreign key (productId) references products(productId)
+);
+
+INSERT INTO products (productName, price) VALUES
+('Laptop Dell Inspiron', 15000000.00),
+('Laptop HP Pavilion', 18000000.00),
+('Chuột Logitech', 350000.00),
+('Bàn phím cơ AKKO', 1200000.00),
+('Màn hình Samsung 24inch', 4200000.00),
+('Tai nghe Sony', 2500000.00),
+('USB Kingston 64GB', 280000.00),
+('Ổ cứng SSD Samsung 512GB', 2200000.00),
+('Webcam Logitech C920', 1900000.00),
+('Loa Bluetooth JBL', 1700000.00);
+
+INSERT INTO orderItem (productId, quantity) VALUES
+(1, 1),
+(2, 2),
+(3, 3),
+(4, 1),
+(5, 2),
+(6, 1),
+(7, 5),
+(8, 1),
+(9, 2),
+(10, 1);
+
+# Hiển thị mỗi sản phẩm đã bán được bao nhiêu sản phẩm
+select
+    p.productId,
+    p.productName,
+    sum(o.quantity) as Selled
+from products p
+join orderItem o
+    on p.productId = o.productId
+group by o.productId, p.productName;
+
+
+
+select
+    p.productId,
+    p.productName,
+    sum(o.quantity * p.price) as TotalPrice
+from products p
+join orderItem o
+on  p.productId = o.productId
+group by  o.productId, p.productName;
+
+
+select
+    p.productId,
+    p.productName,
+    sum(o.quantity * p.price) as TotalPrice
+from products p
+join orderItem o
+on  p.productId = o.productId
+group by  o.productId, p.productName
+having TotalPrice > 5000000
+```
 #Ex5
+
+```sql
+
+
+select
+    c.customerId,
+    c.fullName,
+    Sum(o.totalAmount) as totalSpent,
+    AVG(o.totalAmount) as AVG
+from customer c
+join orderProduct o
+    on c.customerId = o.customerId
+group by c.customerId, c.fullName;
+
+
+select
+    c.customerId,
+    c.fullName,
+    Sum(o.totalAmount) as totalSpent,
+    Count(o.totalAmount) as totalOrder
+from customer c
+join orderProduct o
+    on c.customerId = o.customerId
+group by c.customerId, c.fullName
+having totalOrder > 2 and totalSpent > 100000
+order by totalSpent desc
+
+```
 #Ex6
