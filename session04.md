@@ -1,3 +1,4 @@
+```sql
 
 create table students(
     student_id INT auto_increment primary key,
@@ -123,3 +124,5 @@ select * from course;
 select * from enrollment;
 select * from score;
 
+
+```
